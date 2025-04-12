@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" data-validate="html">
+<html class="page" lang="ru" data-validate="html">
 
   <head>
     <meta charset="UTF-8">
@@ -8,23 +8,441 @@
     <link rel="stylesheet" href="sass/style.scss">
   </head>
 
-  <body class="page-body">
+  <body class="page__body">
+    <header class="header" data-test="header">
+      <div class="header__wrapper">
+        <button class="header__toggle button" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="header__container">
+          <div class="header__logo-wrapper">
+            <img src="img/logo.svg" width="130" height="26" alt="Lifetour">
+          </div>
+          <a class="header__contacts-phone" href="tel:88000000000">8 800 000-00-00</a>
+        </div>
+        <nav class="header__nav">
+          <ul class="haeder__nav-list">
+            <li class="haeder__nav-item">
+              <a class="haeder__nav-link" href="#">Туры</a>
+            </li>
+            <li class="haeder__nav-item">
+              <a class="haeder__nav-link" href="#">Обучение</a>
+            </li>
+            <li class="haeder__nav-item">
+              <a class="haeder__nav-link" href="#">О нас</a>
+            </li>
+            <li class="haeder__nav-item">
+              <a class="haeder__nav-link" href="#">Отзывы</a>
+            </li>
+            <li class="haeder__nav-item">
+              <a class="haeder__nav-link" href="#">Фотографии</a>
+            </li>
+            <li class="haeder__nav-item">
+              <a class="haeder__nav-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero" data-test="hero">
+        <div class="hero__wrapper">
+          <h1 class="visually-hidden">Lifetour</h1>
+          <div class="hero__container">
+            <div class="hero__swiper swiper">
+              <div class="hero__slider slider swiper-wrapper">
+                <div class="slider__content swiper-slide" tabindex="0">
+                  <h2>Захватывающие вершины Кавказа</h2>
+                  <p>В сопровождении опытных гидов ландшафты и совершите восход на вершину горы Чегет.</p>
+                  <a class="hero__button button" type="button">Смотреть тур</a>
+                  <div class="slider__image">
+                    <picture>
+                      <source type="image/webp" width="260" height="300" srcset="img/juri/juri-1@1x.webp 1x, img/juri/juri-1@2x.webp 2x">
+                      <img src="img/juri/juri-1@1x.png" width="260" height="300" srcset="img/juri/juri-1@2x.png 2x" alt="Девушка с темными волосами в бордовом худи">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <div class="castom-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tours" data-test="tours">
+        <div class="tours__wrapper">
+          <h2 class="tours__title title">Ближайшие туры</h2>
+          <div class="tours__container">
+
+            <div class="tours__buttons">
+              <button class="tours__button tours__button-prev button swiper-button-prev" type="button">
+                <span class="visually-hidden">Предыдущий тур</span>
+              </button>
+              <button class="tours__button tours__button-next button swiper-button-next" type="button">
+                <span class="visually-hidden">Следующий тур</span>
+              </button>
+            </div>
+
+            <div class="tours__swiper swiper">
+              <div class="tours__slider swiper-wrapper">
+                <div class="tours__content swiper-slide" tabindex="0">
+                  <ul class="tours__duration-list">
+                    <li class="tours__duration-item tours__duration-item--location">Кавказ</li>
+                    <li class="tours__duration-item tours__duration-item--day">4 дня</li>
+                    <li class="tours__duration-item tours__duration-item--night">3 ночи</li>
+                  </ul>
+                  <h3 class="tours__title title">Путешествие вокруг Эльбруса</h3>
+                  <ul class="tours__info-list">
+                    <li class="tours__info-item">
+                      <p class="tours__info-name">Сложность:</p>
+                      <span class="tours__info-description tours__info-description--rating"></span>
+                    </li>
+                    <li class="tours__info-item">
+                      <p class="tours__info-name">Даты набора:</p>
+                      <span class="tours__info-description">12.06-19.06</span>
+                    </li>
+                    <li class="tours__info-item">
+                      <p class="tours__info-name">Группа:</p>
+                      <span class="tours__info-description">до 15 чел.</span>
+                    </li>
+                  </ul>
+                  <div class="tours__image">
+                    <picture>
+                      <source type="image/webp" width="260" height="300" srcset="img/juri/juri-1@1x.webp 1x, img/juri/juri-1@2x.webp 2x">
+                      <img src="img/juri/juri-1@1x.png" width="260" height="300" srcset="img/juri/juri-1@2x.png 2x" alt="Девушка с темными волосами в бордовом худи">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="tours__button-all button">Показать все туры</button>
+        </div>
+      </section>
+
+      <section class="training" data-test="training">
+        <div class="training__wrapper">
+          <h2 class="training__title title">Обучение</h2>
+          <p>Обучение проводится квалифицированными специалистами, за плечами которых десятки пройденных маршрутов Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.</p>
+          <h2 class="training__title title">Наши инструкторы</h2>
+          <div class="training__container-trainers trainers">
+
+            <div class="trainers__buttons">
+              <button class="trainers__button trainers__button-prev button swiper-button-prev" type="button">
+                <span class="visually-hidden">Предыдущий инструктор</span>
+              </button>
+              <button class="trainers__button trainers__button-next button swiper-button-next" type="button">
+                <span class="visually-hidden">Следующий инструктор</span>
+              </button>
+            </div>
+
+            <div class="trainers__swiper swiper">
+              <div class="trainers__slider swiper-wrapper">
+                <div class="trainers__content swiper-slide" tabindex="0">
+                  <h3>Надежда Колесниченко</h3>
+                  <a class="trainers__social-link" href="https://vk.com/htmlacademy">
+                    <span class="visually-hidden">Мы в Вконтакте</span>
+                    <svg width="12" height="7" fill="#030A1A" role="img">
+                      <use href="/__spritemap#sprite-vk"></use>
+                    </svg>
+                  </a>
+                  <p>Участники говорят, что Надежда ответственная, приятная в общении, и в поездках с ней чувствуешь себя спокойно и уверенно.</p>
+                  <div class="trainers__image">
+                    <picture>
+                      <source type="image/webp" width="260" height="300" srcset="img/juri/juri-1@1x.webp 1x, img/juri/juri-1@2x.webp 2x">
+                      <img src="img/juri/juri-1@1x.png" width="260" height="300" srcset="img/juri/juri-1@2x.png 2x" alt="Девушка с темными волосами в бордовом худи">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3 class="training__process-title title">Процесс обучения</h3>
+          <ul class="training__process-list">
+            <li class="training__process-item training__process-item--map">
+              <p class="training__process-description">Изучение спортивного туристского движения</p>
+            </li>
+            <li class="training__process-item training__process-item--boots">
+              <p class="training__process-description">Подготовка и техническое снаряжение в походах</p>
+            </li>
+            <li class="training__process-item training__process-item--pine-tree">
+              <p class="training__process-description">Лекции по окружающей среде, экологии и гигиене</p>
+            </li>
+            <li class="training__process-item training__process-item--mountain">
+              <p class="training__process-description">Разъяснение сложности горных препятствий</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="about" data-test="about">
+        <div class="about__wrapper">
+          <h2>О нас</h2>
+          <ul>
+            <li>
+              <h3>История компании</h3>
+              <p>В далёком 2000 году мы начали заниматься туризмом — походы, поездки, восхождения, нам это настолько понравилось, что мы этим стали жить. Спустя 5 лет, в 2005 году мы основали компанию, чтобы показывать людям удивительные места нашей страны.</p>
+            </li>
+            <li>
+              <h3>Наша цель</h3>
+              <p>Подарить вам незабываемые впечатления от похода в горы. Мы берём на себя все организационные вопросы. При организации мы обязательно учтём все ваши пожелания. Вам останется только наслаждаться незабываемым приключением в приятной компании.</p>
+            </li>
+          </ul>
+          <div class="about__image">
+            <picture>
+              <source type="image/webp" width="260" height="300" srcset="img/juri/juri-1@1x.webp 1x, img/juri/juri-1@2x.webp 2x">
+              <img src="img/juri/juri-1@1x.png" width="260" height="300" srcset="img/juri/juri-1@2x.png 2x" alt="Девушка с темными волосами в бордовом худи">
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews" data-test="reviews">
+        <div class="reviews__wrapper">
+          <h2 class="reviews__title title">Отзывы</h2>
+          <div class="reviews__container">
+
+            <div class="reviews__buttons">
+              <button class="reviews__button reviews__button-prev button swiper-button-prev" type="button">
+                <span class="visually-hidden">Предыдущий отзыв</span>
+              </button>
+              <button class="reviews__button reviews__button-next button swiper-button-next" type="button">
+                <span class="visually-hidden">Следующий отзыв</span>
+              </button>
+            </div>
+
+            <div class="reviews__swiper swiper">
+              <div class="reviews__slider swiper-wrapper">
+                <div class="reviews__slide swiper-slide" tabindex="0">
+                  <div class="reviews__image-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 768px)" width="80" height="80" srcset="img/user@1x.webp 1x, img/user@2x.webp 2x">
+                      <source type="image/webp" width="80" height="80" srcset="img/user@1x.webp 1x, img/user@2x.webp 2x">
+                      <source media="(min-width: 768px)" width="400" height="462" type="image/jpeg" srcset="img/offers-tablet@1x.jpg 1x, img/offers-tablet@2x.jpg 2x">
+                      <img src="img/user@1x.jpg" width="68" height="68" srcset="img/user@2x.jpg 2x" alt="Фото посетителя">
+                    </picture>
+                  </div>
+                  <p>Осенью ходили в поход на Алтай с друзьями. Впечатления потрясающие! Инструкторы, настоящие эксперты, всему научили, все показали. Делились историями о местах, людях, культуре места.
+                    С уверенностью могу сказать, что жизнь разделилась на до этого и после. Ещё никогда не отдыхал так душой и телом. Всем очень рекомендую!</p>
+                  <h3 class="reviews__name title">Фролов Александр</h3>
+                  <p class="reviews__age">38 лет, Москва</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="advantages" data-test="adv">
+        <div class="advantages__wrapper">
+          <h2 class="advantages__title">Преимущества</h2>
+          <div class="advantages__container">
+
+            <div class="advantages__buttons">
+              <button class="advantages__button advantages__button-prev button swiper-button-prev" type="button">
+                <span class="visually-hidden">Предыдущий слайд</span>
+              </button>
+              <button class="advantages__button advantages__button-next button swiper-button-next" type="button">
+                <span class="visually-hidden">Следующий слайд</span>
+              </button>
+            </div>
+
+            <div class="advantages__swiper swiper">
+              <ul class="advantages__slider swiper-wrapper">
+                <li class="advantages__slide advantages__slide--shield swiper-slide" tabindex="0">
+                  <h3>Безопасность</h3>
+                  <p>Уделяем внимание безопасности клиентов, внедряя строгие процедуры и протоколы безопасности. Имеем планы действий на случай непредвиденных обстоятельств и даём гарантию полной безопасности во время всего тура.</p>
+                </li>
+                <li class="advantages__slide advantages__slide--crown swiper-slide" tabindex="0">
+                  <h3>Экспертиза и знания</h3>
+                  <p>Наша команда опытных гидов имеет обширные знания о местности, погодных условиях и технике безопасности. Это гарантирует, что наши клиенты находятся в надёжных руках и могут в полной мере насладиться опытом без опасений.</p>
+                </li>
+                <li class="advantages__slide advantages__slide--boots swiper-slide" tabindex="0">
+                  <h3>Оборудование и снаряжение</h3>
+                  <p>Мы предоставляем клиентам все необходимое оборудование, необходимое для путешествия. Это избавляет клиентов от необходимости покупать, брать с собой снаряжение, что делает путешествие более удобным и экономически выгодным.</p>
+                </li>
+                <li class="advantages__slide advantages__slide--path swiper-slide" tabindex="0">
+                  <h3>Индивидуальные маршруты</h3>
+                  <p>Предлагаем широкий выбор туров, отвечающих различным уровням мастерства и интересам. Мы также можем адаптировать маршруты к вашим конкретным потребностям и предпочтениям, чтобы вы получили индивидуальный опыт.</p>
+                </li>
+                <li class="advantages__slide advantages__slide--eco swiper-slide" tabindex="0">
+                  <h3>Бережное отношение к природе</h3>
+                  <p>Уделяем первостепенное внимание охране окружающей среды и гарантируем, что туры оказывают минимальное воздействие на природную среду. Наша компания следует принципу «Не оставлять следов».</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery" data-test="gallery">
+        <div class="gallery__wrapper">
+          <h2 class="gallery__title title">Фотогалерея</h2>
+          <p>Добавляйте фото с хэштегом #лайфтур, а также отмечайте нас на фото. Лучшие фотографии украсят этот раздел нашего сайта.</p>
+          <div class="gallery__container">
+
+            <div class="gallery__buttons">
+              <button class="gallery__button gallery__button-prev button swiper-button-prev" type="button">
+                <span class="visually-hidden">Предыдущее фото</span>
+              </button>
+              <button class="gallery__button gallery__button-next button swiper-button-next" type="button">
+                <span class="visually-hidden">Следующее фото</span>
+              </button>
+            </div>
+
+            <div class="gallery__swiper swiper">
+              <div class="gallery__slider swiper-wrapper">
+                <div class="gallery__slide swiper-slide" tabindex="0">
+                  <div class="gallery__image-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 768px)" width="80" height="80" srcset="img/user@1x.webp 1x, img/user@2x.webp 2x">
+                      <source type="image/webp" width="80" height="80" srcset="img/user@1x.webp 1x, img/user@2x.webp 2x">
+                      <source media="(min-width: 768px)" width="400" height="462" type="image/jpeg" srcset="img/offers-tablet@1x.jpg 1x, img/offers-tablet@2x.jpg 2x">
+                      <img src="img/user@1x.jpg" width="68" height="68" srcset="img/user@2x.jpg 2x" alt="Фото посетителя">
+                    </picture>
+                  </div>
+                </div>
+                <div class="gallery__slide swiper-slide" tabindex="0">
+                  <div class="gallery__image-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 768px)" width="80" height="80" srcset="img/user@1x.webp 1x, img/user@2x.webp 2x">
+                      <source type="image/webp" width="80" height="80" srcset="img/user@1x.webp 1x, img/user@2x.webp 2x">
+                      <source media="(min-width: 768px)" width="400" height="462" type="image/jpeg" srcset="img/offers-tablet@1x.jpg 1x, img/offers-tablet@2x.jpg 2x">
+                      <img src="img/user@1x.jpg" width="68" height="68" srcset="img/user@2x.jpg 2x" alt="Фото посетителя">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="form" data-test="form">
+        <div class="form__wrapper">
+          <h2>Остались вопросы?</h2>
+          <p>Заполните форму и наш оператор свяжется с вами для консультации.</p>
+          <form class="form__group" action="https://echo.htmlacademy.ru" method="post">
+            <div class="form__content">
+              <label class="form__label" for="phone">Телефон</label>
+                <input class="form__field" aria-label="Телефон" type="phone" id="phone" name="phone" placeholder="+7 (000)-000-00-00" required>
+                <span class="visually-hidden form__error form__error--phone">Текст ошибки</span>
+            </div>
+            <div class="form__content">
+              <label class="form__label" for="email">Email</label>
+                <input class="form__field" aria-label="Имя" type="email" id="email" name="email"
+                  placeholder="ivanov@gmail.com" required>
+                <span class="visually-hidden form__error form__error--email">Текст ошибки</span>
+            </div>
+            <button class="form__button button" type="submit">Отправить</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" data-test="footer">
+      <div class="footer__wrapper">
+        <h2 class="footer__title title">Контакты</h2>
+        <p>Свяжитесь с нами любым удобным для вас способом или приходите к нам в гости. Мы будем рады поделиться увлекательными историями и подобрать для вас тур.</p>
+        <ul class="footer__contacts contacts">
+          <li class="contacts__item contacts__item--phone">
+            <h3 class="contacts__name">Телефон</h3>
+            <a class="contacts__link" href="tel:89837454545">
+              <p class="contacts__text">+7 983 745-45-45</p>
+            </a>
+          </li>
+          <li class="contacts__item contacts__item--email">
+            <h3 class="contacts__name">Email</h3>
+            <a class="contacts__link" href="mailto:info@lifetour.com">
+              <p class="contacts__text">info@lifetour.com</p>
+            </a>
+          </li>
+          <li class="contacts__item contacts__item--addres">
+            <h3 class="contacts__name contacts__item--map">Адрес:</h3>
+            <address class="contacts__address">
+              <p class="contacts__text">г. Москва, пр-т Мира, д. 14, офис 101</p>
+            </address>
+          </li>
+        </ul>
+
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" width="1440" height="540" srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" width="768" height="480" srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x">
+          <source type="image/webp" width="320" height="420" srcset="images/map-mobile@1x.webp 1x, images/map-mobile@2x.webp 2x">
+          <source media="(min-width: 1440px)" width="1440" height="540" type="image/jpeg" srcset="image/map-desktop@1x.jpg 1x, images/map-desctop@2x.jpg 2x">
+          <source media="(min-width: 768px)" width="768" height="480" type="image/jpeg" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x">
+          <img class="maps__image" src="images/map-mobile@1x.jpg" width="320" height="420" srcset="images/map-mobile@2x.jpg 2x" alt="Drink2Go на карте.">
+        </picture>
+        <div class="maps__wrapper">
+          <span class="visually-hidden">Открыть меню</span>
+          <svg class="maps__icon" width="38" height="50" role="img">
+            <use href="icons/stack.svg#map"></use>
+          </svg>
+        </div>
+
+        <div class="footer__logo-wrapper">
+          <img src="img/logo.svg" width="130" height="26" alt="SUPERGYM">
+        </div>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="#">Туры</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Обучение</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">О нас</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Отзовы</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Фотографии</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Контакты</a>
+          </li>
+        </ul>
+        <div class="footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link" href="https://vk.com/htmlacademy">
+                <span class="visually-hidden">Мы в Вконтакте</span>
+                <svg width="12" height="7" fill="#030A1A" role="img">
+                  <use href="/__spritemap#sprite-vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://ok.ru">
+                <span class="visually-hidden">Мы в Одноклассниках</span>
+                <svg width="9" height="16" fill="#030A1A" role="img">
+                  <use href="/__spritemap#sprite-ok"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://www.reddit.com">
+                <span class="visually-hidden">Мы в Реддит</span>
+                <svg  width="14" height="14" fill="#030A1A" role="img">
+                  <use href="/__spritemap#sprite-reddit"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <a class="footer__privacy-policy" href="#">Политика конфиденциальности</a>
+      </div>
+    </footer>
+
+
     <!-- пример использования спрайта -->
     <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
     <svg>
       <use href="/__spritemap#sprite-user"></use>
     </svg>
     <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="header">header</div>
-    <div data-test="hero">hero</div>
-    <div data-test="tours">tours</div>
-    <div data-test="training">training</div>
-    <div data-test="about">about</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="adv">adv</div>
-    <div data-test="gallery">gallery</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
+
     <script type="module" src="js/main.js"></script>
   </body>
 
