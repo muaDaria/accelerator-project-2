@@ -1,0 +1,101 @@
+.footer {
+
+}
+
+.footer__wrapper {
+  @include wrapper-size;
+
+  padding: 40px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    padding: 45px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    padding: 40px 103px;
+  }
+}
+
+.footer__logo-wrapper img {
+  display: block;
+  width: 100px;
+
+  @media (min-width: $tablet-width) {
+    width: 110px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 130px;
+  }
+}
+
+.footer__list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 35px;
+  row-gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+    align-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 82px;
+    row-gap: 20px;
+    align-content: flex-start;
+  }
+}
+
+.footer__item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-base-white;
+
+  @media (min-width: $tablet-width) {
+    line-height: 22px;
+  }
+}
+
+.footer__link {
+  color: $color-base-white;
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  border-bottom: 1px solid $color-base-white;
+  padding-bottom: 5px;
+}
+
+.footer__link:focus {
+  outline: 1px solid $color-base-white;
+  outline-offset: 10px;
+}
+
+.footer__link:active {
+  outline: none;
+}
+
+// добавить класс с модификатором --disabled
+// для отключения ссылки
+.footer__link--disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.4;
+}
+
+.footer__social {
+  @media (min-width: $tablet-width) {
+    min-width: 105px;
+  }
+}

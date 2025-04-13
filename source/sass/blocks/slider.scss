@@ -1,0 +1,123 @@
+.slider__content {
+  position: relative;
+}
+
+.slider__title {
+  margin: auto;
+  font-weight: 400;
+  font-size: 22px;
+  text-align: center;
+  color: $color-base-white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 25px;
+  z-index: 2;
+}
+
+.slider__image {
+  width: 260px;
+  height: 300px;
+}
+
+.slider__image img {
+  display: block;
+  width: 260px;
+  height: 300px;
+}
+
+.slider__skills {
+  display: none;
+  width: 260px;
+  height: 300px;
+  position: absolute;
+  content: "";
+  color: $color-base-white;
+  top: 0;
+  left: 0;
+  padding: 65px 40px 40px;
+  background-color: rgba(16, 38, 84, 0.89);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 0 35px 0 rgba(42, 59, 99, 0.17);
+}
+
+.slider__skills-speciality {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 34px;
+  text-align: center;
+}
+
+.slider__skills-list {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 160px;
+  max-height: 130px;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 7px;
+    background-color: $color-active;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-active;
+    opacity: 0.4;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    background-color: #f9f9fd;
+    border-radius: 10px;
+  }
+}
+
+.slider__skills-item {
+  font-weight: 400;
+  padding-left: 16px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $color-base-white;
+    left: 0;
+    top: 5px;
+    z-index: 2;
+  }
+}
+
+.slider__content:focus {
+  outline: none;
+}
+
+.slider__content:focus .slider__title {
+  bottom: 0;
+  top: 46px;
+}
+
+.slider__content:focus .slider__skills {
+  display: block;
+}
+
+.slider__content:hover .slider__title {
+  @media (min-width: $desktop-width) {
+    bottom: 0;
+    top: 46px;
+  }
+}
+
+.slider__content:hover .slider__skills {
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}

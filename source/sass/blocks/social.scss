@@ -1,0 +1,63 @@
+.social__list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    gap: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 10px;
+  }
+}
+
+.social__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social__link {
+  width: 25px;
+  height: 25px;
+  background-color: $color-base-white;
+  border-radius: 50%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social__link:hover {
+  background-color: #74819c;
+}
+
+.social__link:hover svg,
+.social__link:focus svg,
+.social__link:active svg {
+  fill: #ffffff;
+}
+
+.social__link:focus {
+  background-color: #103aae;
+  outline: none;
+}
+
+.social__link:active {
+  background-color: $color-base-black;
+}
+
+// добавить класс с модификатором --disabled
+// для отключения ссылки
+.social__link--disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.3;
+}
+
+.social__link--disabled svg {
+  fill: #030a1a;
+}
