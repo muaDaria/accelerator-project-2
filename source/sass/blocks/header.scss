@@ -31,10 +31,6 @@
   background-size: 26px 19px;
   background-position: center;
 
-  @media (min-width: $tablet-width) {
-
-  }
-
   @media (min-width: $desktop-width) {
     display: none;
   }
@@ -73,14 +69,6 @@
 
 .header__logo-wrapper img {
   display: block;
-
-  @media (min-width: $tablet-width) {
-
-  }
-
-  @media (min-width: $desktop-width) {
-
-  }
 }
 
 .header__contacts-phone {
@@ -172,13 +160,6 @@
     padding: 0;
     gap: 30px;
     max-width: 802px;
-  }
-}
-
-.header__nav-item {
-
-  @media (min-width: $desktop-width) {
-
   }
 }
 

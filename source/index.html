@@ -46,27 +46,65 @@
     </header>
     <main>
       <section class="hero" data-test="hero">
-        <div class="hero__wrapper">
           <h1 class="visually-hidden">Lifetour</h1>
           <div class="hero__container">
             <div class="hero__swiper swiper">
-              <div class="hero__slider slider swiper-wrapper">
-                <div class="slider__content swiper-slide" tabindex="0">
-                  <h2>Захватывающие вершины Кавказа</h2>
-                  <p>В сопровождении опытных гидов ландшафты и совершите восход на вершину горы Чегет.</p>
-                  <a class="hero__button button" type="button">Смотреть тур</a>
-                  <div class="slider__image">
+              <div class="hero__slider swiper-wrapper">
+                <div class="hero__content swiper-slide" tabindex="0">
+                  <div class="hero__wrapper">
+                    <h2>Захватывающие вершины Кавказа</h2>
+                    <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход на вершину горы Чегет.</p>
+                    <a class="hero__button button" type="button">Смотреть тур</a>
+                  </div>
+                  <div class="hero__image-wrapper">
                     <picture>
-                      <source type="image/webp" width="260" height="300" srcset="img/juri/juri-1@1x.webp 1x, img/juri/juri-1@2x.webp 2x">
-                      <img src="img/juri/juri-1@1x.png" width="260" height="300" srcset="img/juri/juri-1@2x.png 2x" alt="Девушка с темными волосами в бордовом худи">
+                      <source type="image/webp" media="(min-width: 1440px)" width="1440" height="800" srcset="img/hero/caucasus-desktop@1x.webp 1x, img/hero/caucasus-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" width="768" height="1034" srcset="img/hero/caucasus-tablet@1x.webp 1x, img/hero/caucasus-tablet@2x.webp 2x">
+                      <source type="image/webp" width="320" height="568" srcset="img/hero/caucasus-mobile@1x.webp 1x, img/hero/caucasus-mobile@2x.webp 2x">
+                      <source media="(min-width: 1440px)" width="1440" height="800" type="image/jpeg" srcset="img/hero/caucasus-desktop@1x.jpg 1x, img/hero/caucasus-desctop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" width="768" height="1034" type="image/jpeg" srcset="img/hero/caucasus-tablet@1x.jpg 1x, img/hero/caucasus-tablet@2x.jpg 2x">
+                      <img src="img/hero/caucasus-mobile@1x.jpg" width="320" height="568" srcset="img/hero/caucasus-mobile@2x.jpg 2x" alt="Спортсмен на фоне дымки из тальки">
+                    </picture>
+                  </div>
+                </div>
+                <div class="hero__content swiper-slide" tabindex="0">
+                  <div class="hero__wrapper">
+                    <h2>Невероятная природа Камчатки</h2>
+                    <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых уголков дикой природы в мире.</p>
+                    <a class="hero__button button" type="button">Смотреть тур</a>
+                  </div>
+                  <div class="hero__image-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" width="1440" height="800" srcset="img/hero/kamchatka-desktop@1x.webp 1x, img/hero/kamchatka-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" width="768" height="1034" srcset="img/hero/kamchatka-tablet@1x.webp 1x, img/hero/kamchatka-tablet@2x.webp 2x">
+                      <source type="image/webp" width="320" height="568" srcset="img/hero/kamchatka-mobile@1x.webp 1x, img/hero/kamchatka-mobile@2x.webp 2x">
+                      <source media="(min-width: 1440px)" width="1440" height="800" type="image/jpeg" srcset="img/hero/kamchatka-desktop@1x.jpg 1x, img/hero/kamchatka-desctop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" width="768" height="1034" type="image/jpeg" srcset="img/hero/kamchatka-tablet@1x.jpg 1x, img/hero/kamchatka-tablet@2x.jpg 2x">
+                      <img src="img/hero/kamchatka-mobile@1x.jpg" width="320" height="568" srcset="img/hero/kamchatka-mobile@2x.jpg 2x" alt="Спортсмен на фоне дымки из тальки">
+                    </picture>
+                  </div>
+                </div>
+                <div class="hero__content swiper-slide" tabindex="0">
+                  <div class="hero__wrapper">
+                    <h2>Магические пейзажи Алтайского Края</h2>
+                    <p>Алтайский трекинг-тур — это захватывающее приключение с посещением магических и захватывающих дух ландшафтов Алтайских гор.</p>
+                    <a class="hero__button button" type="button">Смотреть тур</a>
+                  </div>
+                  <div class="hero__image-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" width="1440" height="800" srcset="img/hero/altai-desktop@1x.webp 1x, img/hero/altai-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" width="768" height="1034" srcset="img/hero/altai-tablet@1x.webp 1x, img/hero/altai-tablet@2x.webp 2x">
+                      <source type="image/webp" width="320" height="568" srcset="img/hero/altai-mobile@1x.webp 1x, img/hero/altai-mobile@2x.webp 2x">
+                      <source media="(min-width: 1440px)" width="1440" height="800" type="image/jpeg" srcset="img/hero/altai-desktop@1x.jpg 1x, img/hero/altai-desctop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" width="768" height="1034" type="image/jpeg" srcset="img/hero/altai-tablet@1x.jpg 1x, img/hero/altai-tablet@2x.jpg 2x">
+                      <img src="img/hero/altai-mobile@1x.jpg" width="320" height="568" srcset="img/hero/altai-mobile@2x.jpg 2x" alt="Спортсмен на фоне дымки из тальки">
                     </picture>
                   </div>
                 </div>
               </div>
-              <div class="castom-pagination"></div>
+              <div class="swiper-pagination hero__pagination"></div>
             </div>
           </div>
-        </div>
       </section>
 
       <section class="tours" data-test="tours">

@@ -1,28 +1,35 @@
 import Swiper from 'swiper';
-import {Navigation, Pagination} from 'swiper/modules';
+import {Pagination} from 'swiper/modules';
 import 'swiper/css';
 
 const initSliderJuri = () => {
-  const sliderElement = document.querySelector('.juri__swiper');
+  const sliderElement = document.querySelector('.hero__swiper');
   if (!sliderElement) {
     return;
   }
 
-  new Swiper('.juri__swiper', {
-    modules: [Navigation, Pagination],
+  new Swiper('.hero__swiper',{
+    modules: [Pagination],
 
     direction: 'horizontal',
     loop: true,
     grabCursor: 'pointer',
     slidesPerView: 1,
     initialSlide: 0,
+    simulateTouch: true,
+    effect: 'fade',
+
+    fadeEffect: {
+      crossFade: true,
+    },
+
     //watchOverflow: true,
     //centeredSides: false,
 
-    navigation: {
-      nextEl: '.juri__button-next',
-      prevEl: '.juri__button-prev',
-    },
+    /*navigation: {
+      //nextEl: '.juri__button-next',
+      //prevEl: '.juri__button-prev',
+   // },
 
     //mousewheel: {
      // forceToAxis: true,
@@ -44,6 +51,23 @@ const initSliderJuri = () => {
         slidesPerView: 4,
         spaceBetween: 40,
         simulateTouch: false,
+      }
+    }*/
+    pagination: {
+      el: '.hero__pagination',
+      type: 'bullets',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return `<button class="${className} hero__pagination-bullet" tabindex="0"></button>`;
+      },
+      bulletClass: 'hero__pagination-bullet',
+      bulletActiveClass: 'hero__pagination-bullet--active',
+      horizontalClass: 'hero__pagination-horizontal',
+    },
+
+    breakpoints: {
+      1440: {
+        allowTouchMove: false,
       }
     }
   });

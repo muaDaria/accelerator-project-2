@@ -28,7 +28,7 @@
   background-color: $color-active;
 }
 
-button:disabled {
+.button:disabled {
   opacity: 0.3;
   background-color: $color-disabled;
 }
