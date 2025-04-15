@@ -8,7 +8,7 @@
 
 .hero__wrapper {
   @include wrapper-size;
-  margin-top: 144px;
+  padding: 144px 15px 80px;
   grid-column: 1;
   grid-row: 1;
   text-align: center;
@@ -20,13 +20,14 @@
 
   @media (min-width: $tablet-width) {
     width: $tablet-width;
-    padding: 0 45px;
-    margin-top: 342px;
+    padding: 342px 45px 80px;
   }
 
   @media (min-width: $desktop-width) {
     width: $desktop-width;
-    padding: 0 120px;
+    padding: 200px 120px 80px;
+    text-align: left;
+    gap: 25px;
   }
 }
 
@@ -41,8 +42,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 92px;
-    line-height: 110px;
+    font-size: 77px;
+    max-width: 945px;
   }
 }
 
@@ -60,8 +61,58 @@
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 92px;
-    line-height: 110px;
+    font-size: 17px;
+    line-height: 24px;
+    align-self: start;
+    max-width: 464px;
+  }
+}
+
+.hero__details-list {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    @include list-reset;
+    max-width: 1000px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 110px;
+  }
+}
+
+.hero__details-item {
+  padding: 13px 19px 13px 39px;
+  border: 1px solid transparent;
+  border-image-source: linear-gradient(to right, #FFFFFF, rgba(255, 255, 255, 0.5));
+  border-image-slice: 1;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 20px;
+  }
+}
+
+.hero__details-item--duration {
+  &::before {
+    background-image: url("/__spritemap#sprite-moon-view");
+    background-size: 12px 12px;
+  }
+}
+
+.hero__details-item--level {
+  &::before {
+    background-image: url("/__spritemap#sprite-level-view");
+    background-size: 10px 11px;
   }
 }
 
@@ -92,6 +143,11 @@
   right: 0;
   z-index: 10;
   bottom: 38px;
+
+  @media (min-width: $desktop-width) {
+    left: 1100px;
+    bottom: 88px;
+  }
 }
 
 .hero__pagination-bullet {
@@ -127,14 +183,12 @@
   margin-top: 45px;
 
   @media (min-width: $tablet-width) {
-    grid-column: 2/3;
-    padding: 20px 0;
     margin-top: 20px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-column: 2/3;
-    padding: 25px 0;
+    align-self: start;
+    margin-top: 10px;
   }
 }
 
