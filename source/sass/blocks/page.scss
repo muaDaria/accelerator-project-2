@@ -15,3 +15,23 @@
   color: $color-base-black;
   background-color: $color-base-white;
 }
+
+.page__main {
+ /* position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 346px;
+    height: 595px;
+    background-image:
+    image-set(
+      url("../../img/clouds/clouds-mobile@1x.webp") 1x type("image/webp"),
+      url("../../img/clouds/clouds-mobile@2x.webp") 2x type("image/webp"),
+      url("../../img/clouds/clouds-mobile@1x.png") 1x type("image/png"),
+      url("../../img/clouds/clouds-mobile@2x.png") 2x type("image/png"),
+      );
+    background-repeat: no-repeat;
+    background-size: cover;
+  }*/
+}

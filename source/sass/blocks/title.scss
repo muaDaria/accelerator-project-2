@@ -3,5 +3,31 @@
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 800;
   font-size: 22px;
-  line-height: 22px;
+  line-height: 100%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 35px;
+  }
+}
+
+.title__shadow {
+  position: absolute;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 100%;
+  color: $color-base-black;
+  opacity: 0.03;
+  top: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 55px;
+  }
 }
