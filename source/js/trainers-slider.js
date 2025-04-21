@@ -2,19 +2,20 @@ import Swiper from 'swiper';
 import {Navigation} from 'swiper/modules';
 //import 'swiper/css';
 
-const initSliderTours = () => {
-  const sliderElement = document.querySelector('.tours__swiper');
+const initSliderTrainers = () => {
+  const sliderElement = document.querySelector('.trainers__swiper');
   if (!sliderElement) {
     return;
   }
 
-  new Swiper('.tours__swiper',{
+  new Swiper('.trainers__swiper',{
     modules: [Navigation],
 
     direction: 'horizontal',
     loop: true,
     grabCursor: 'pointer',
     slidesPerView: 1,
+    //autoHeight: true,
     initialSlide: 0,
     simulateTouch: true,
     effect: 'fade',
@@ -27,8 +28,8 @@ const initSliderTours = () => {
     //centeredSides: false,
 
     navigation: {
-      nextEl: '.tours__button-next',
-      prevEl: '.tours__button-prev',
+      nextEl: '.trainers__button-next',
+      prevEl: '.trainers__button-prev',
     },
 
     //mousewheel: {
@@ -39,22 +40,23 @@ const initSliderTours = () => {
     breakpoints: {
       320: {
         slidesPerView: 1,
-        initialSlide: 0,
+        initialSlide: 2,
         simulateTouch: true,
       },
       768: {
-        slidesPerView: 2,
-        spaceBetween: 18,
+        slidesPerView: 3,
+        spaceBetween: 20,
         simulateTouch: false,
       },
       1440: {
-        slidesPerView: 3,
-        spaceBetween: 30,
+        slidesPerView: 4,
+        spaceBetween: 20,
         simulateTouch: false,
       }
     }
+    /*
 
-    /*breakpoints: {
+    breakpoints: {
       1440: {
         allowTouchMove: false,
       }
@@ -62,4 +64,4 @@ const initSliderTours = () => {
   });
 };
 
-initSliderTours();
+initSliderTrainers();
