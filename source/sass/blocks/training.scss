@@ -12,13 +12,9 @@
 
   @media (min-width: $desktop-width) {
     width: $desktop-width;
-    padding: 100px 120px;
+    padding: 40px 120px;
     gap: 56px;
   }
-}
-
-.training__title-container {
-  position: relative;
 }
 
 .training__title {
@@ -32,7 +28,7 @@
 
   @media (min-width: $desktop-width) {
     padding: 23px 0 0;
-    margin-bottom: 37px;
+    margin-bottom: 35px;
   }
 }
 
@@ -52,8 +48,6 @@
 .training__content p:not(:last-child) {
   margin-bottom: 8px;
 }
-
-
 
 .training__process-title {
   margin-top: 0;

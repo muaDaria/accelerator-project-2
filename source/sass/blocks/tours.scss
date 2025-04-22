@@ -71,27 +71,17 @@
   }
 }
 
-.tours__title-container {
-  position: relative;
-
-  @media (min-width: $tablet-width) {
-    max-width: 500px;
-  }
-
-  @media (min-width: $desktop-width) {
-    max-width: 800px;
-  }
-}
-
 .tours__title {
   padding: 19px 0 14px;
 
   @media (min-width: $tablet-width) {
     padding: 20px 0 10px;
+    max-width: 500px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 23px 0 0;
+    max-width: 800px;
   }
 }
 
@@ -102,14 +92,6 @@
   grid-template-columns: 1fr;
   width: 100%;
   line-height: unset;
-
-  @media (min-width: $tablet-width) {
-
-  }
-
-  @media (min-width: $desktop-width) {
-
-  }
 }
 
 .tours__details {
@@ -122,14 +104,6 @@
   gap: 15px;
   padding: 0 20px 30px 20px;
   color: $color-base-white;
-
-  @media (min-width: $tablet-width) {
-
-  }
-
-  @media (min-width: $desktop-width) {
-
-  }
 }
 
 .tours__duration-list {
@@ -141,10 +115,6 @@
 
   @media (min-width: $tablet-width) {
     justify-content: space-between;
-  }
-
-  @media (min-width: $desktop-width) {
-
   }
 }
 
@@ -173,10 +143,6 @@
       top: 0;
     }
   }
-
-  @media (min-width: $desktop-width) {
-
-  }
 }
 
 .tours__duration-item-wrapper {
@@ -185,10 +151,6 @@
 
   @media (min-width: $tablet-width) {
     gap: 15px;
-  }
-
-  @media (min-width: $desktop-width) {
-
   }
 }
 
@@ -202,14 +164,6 @@
     left: 10px;
     top: 4px;
   }
-
-  @media (min-width: $tablet-width) {
-
-  }
-
-  @media (min-width: $desktop-width) {
-
-  }
 }
 
 .tours__duration-item--day {
@@ -222,10 +176,6 @@
   @media (min-width: $tablet-width) {
     padding: 4px 0 4px 32px;
   }
-
-  @media (min-width: $desktop-width) {
-
-  }
 }
 
 .tours__duration-item--night {
@@ -237,10 +187,6 @@
 
   @media (min-width: $tablet-width) {
     padding: 4px 0 4px 32px;
-  }
-
-  @media (min-width: $desktop-width) {
-
   }
 }
 
@@ -270,14 +216,6 @@
     background-color: $color-base-white;
     opacity: 0.2;
     top: 0;
-  }
-
-  @media (min-width: $tablet-width) {
-
-  }
-
-  @media (min-width: $desktop-width) {
-
   }
 }
 
@@ -361,14 +299,6 @@
 
 .tours__image-wrapper img {
   display: block;
-
-  @media (min-width: $tablet-width) {
-
-  }
-
-  @media (min-width: $desktop-width) {
-
-  }
 }
 
 .tours__container {
@@ -408,14 +338,6 @@
     top: 13px;
     left: 12px
   }
-
-  @media (min-width: $tablet-width) {
-
-  }
-
-  @media (min-width: $desktop-width) {
-
-  }
 }
 
 .tours__button-prev {
@@ -454,9 +376,5 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     width: 240px;
-  }
-
-  @media (min-width: $desktop-width) {
-
   }
 }

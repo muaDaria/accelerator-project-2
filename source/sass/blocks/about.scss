@@ -3,17 +3,17 @@
 
   @media (min-width: $tablet-width) {
     margin: 0 auto;
-    padding: 60px 48px 40px 0;
+    padding: 40px 48px 40px 0;
     display: grid;
     grid-template-columns: 450px 270px;
     justify-content: center;
-    align-items: center;
+    //align-items: center;
     gap: 0;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 100px 195px 100px 0;
-    grid-template-columns: repeat(2, 660px);
+    padding: 100px 120px 100px 0;
+    grid-template-columns: minmax(660px, 850px) 660px;
   }
 }
 
@@ -22,6 +22,7 @@
   @media (min-width: $tablet-width) {
     grid-column: 1/2;
     position: relative;
+    padding-top: 134px;
 
     &::after {
       position: absolute;
@@ -36,6 +37,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: 0;
+
     &::after {
       width: calc(5vw - 72px);
     }
@@ -46,6 +49,10 @@
 .about__image-wrapper img {
   display: block;
   object-position: left center;
+
+   @media (min-width: $desktop-width) {
+    object-position: inherit;
+  }
 }
 
 .about__content {
@@ -59,25 +66,52 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 585px;
+    width: 660px;
+    padding-right: 75px;
     justify-self: flex-start;
   }
 }
 
-
 .about__content h2 {
   margin-top: 0;
   margin-bottom: 25px;
+  padding: 16px 0 17px;
   font-weight: 800;
   font-size: 22px;
   line-height: 100%;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: attr(data-title);
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 100%;
+    color: $color-base-black;
+    opacity: 0.03;
+    top: 0;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 25px;
+    padding: 20px 0 10px;
+    margin-bottom: 36px;
+
+    &::before {
+      font-size: 40px;
+      top: 7px;
+    }
   }
 
   @media (min-width: $desktop-width) {
+    padding: 45px 0 0;
     font-size: 35px;
+    margin-bottom: 57px;
+
+    &::before {
+      font-size: 55px;
+      top: 7px;
+    }
   }
 }
 
@@ -98,6 +132,11 @@
   @media (min-width: $tablet-width) {
     font-size: 18px;
   }
+
+  @media (min-width: $desktop-width) {
+    font-size: 21px;
+    margin-bottom: 20px;
+  }
 }
 
 .about__content p {
@@ -106,6 +145,11 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 14px;
+    line-height: 22px;
   }
 }
 
