@@ -7,3 +7,4 @@ import './nav.js';
 import './hero-slider.js';
 import './tours-slider.js';
 import './trainers-slider.js';
+import './reviews-slider.js';
