@@ -75,7 +75,6 @@
     align-items: center;
     gap: 30px;
     width: 565px;
-    //width: calc(565px / 2);
   }
 
   @media (min-width: $desktop-width) {
@@ -174,14 +173,6 @@
     background-position: center;
     top: 13px;
     left: 12px
-  }
-
-  @media (min-width: $tablet-width) {
-
-  }
-
-  @media (min-width: $desktop-width) {
-
   }
 }
 
