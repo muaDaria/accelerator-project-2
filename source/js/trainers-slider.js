@@ -16,7 +16,7 @@ const initSliderTrainers = () => {
     grabCursor: 'pointer',
     slidesPerView: 1,
     //autoHeight: true,
-    initialSlide: 0,
+    //initialSlide: 0,
     simulateTouch: true,
     effect: 'fade',
 

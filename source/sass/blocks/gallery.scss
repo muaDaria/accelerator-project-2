@@ -1,0 +1,139 @@
+.gallery__wrapper {
+  @include wrapper-size;
+  padding: 20px 15px 31px;
+  display: grid;
+  gap: 10px;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    padding: 40px 45px 21px;
+    gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    padding: 100px 120px 44px;
+    gap: 25px;
+  }
+}
+
+.gallery__title {
+  padding: 17px 0 16px;
+
+  @media (min-width: $tablet-width) {
+   padding: 20px 0 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 23px 0 0;
+  }
+}
+
+.gallery__wrapper p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 22px;
+    max-width: 420px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 592px;
+   }
+}
+
+.gallery__wrapper p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.gallery__container {
+  width: 320px;
+  margin: 0 auto;
+  margin-bottom: 3px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
+}
+
+.gallery__slider {
+  @media (min-width: $desktop-width) {
+    gap: 5px;
+  }
+}
+
+.gallery__slide {
+  @media (min-width: $desktop-width) {
+    width: 284px;
+  }
+}
+
+.gallery__image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  @media (min-width: $desktop-width) {
+    gap: 7px;
+  }
+}
+
+.gallery__image-wrapper img {
+  display: block;
+}
+
+.gallery__buttons {
+  display: none;
+}
+
+.gallery__buttons {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    position: absolute;
+    top: -56px;
+    right: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+   display: none;
+  }
+}
+
+.gallery__button {
+  position: relative;
+  padding: 0;
+  width: 37px;
+  height: 35px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 9px;
+    background-image: url("/__spritemap#sprite-arrow-long-view");
+    background-size: 14px 9px;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 13px;
+    left: 12px
+  }
+}
+
+.gallery__button-prev {
+
+  &::after {
+    transform: rotate(180deg);
+  }
+}
