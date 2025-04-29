@@ -9,42 +9,41 @@
   </head>
 
   <body class="page__body">
-    <header class="header header--closed" data-test="header">
-      <div class="header__wrapper">
-        <button class="header__toggle button" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <div class="header__container">
-          <a class="header__logo-wrapper" href="index.html">
-            <img src="img/logo.svg" width="142" height="42" alt="Lifetour">
-          </a>
+    <div class="overlay"></div>
+    <header class="header" data-test="header">
+      <div class="header__wrapper header--closed">
+          <button class="header__toggle button" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
           <nav class="header__nav">
             <ul class="header__nav-list">
               <li class="header__nav-item">
-                <a class="header__nav-link" href="#">Туры</a>
+                <a class="header__nav-link" href="#tours">Туры</a>
               </li>
               <li class="header__nav-item">
-                <a class="header__nav-link" href="#">Обучение</a>
+                <a class="header__nav-link" href="#training">Обучение</a>
               </li>
               <li class="header__nav-item">
-                <a class="header__nav-link" href="#">О нас</a>
+                <a class="header__nav-link" href="#about">О нас</a>
               </li>
               <li class="header__nav-item">
-                <a class="header__nav-link" href="#">Отзывы</a>
+                <a class="header__nav-link" href="#reviews">Отзывы</a>
               </li>
               <li class="header__nav-item">
-                <a class="header__nav-link" href="#">Фотографии</a>
+                <a class="header__nav-link" href="#gallery">Фотографии</a>
               </li>
               <li class="header__nav-item">
-                <a class="header__nav-link" href="#">Контакты</a>
+                <a class="header__nav-link" href="#contacts">Контакты</a>
               </li>
             </ul>
           </nav>
+          <div class="header__logo-wrapper">
+            <img src="img/logo.svg" width="142" height="42" alt="Lifetour">
+          </div>
           <a class="header__contacts-phone" href="tel:88000000000">8 800 000-00-00</a>
-        </div>
       </div>
     </header>
-    <main class="page__main">
+    <main>
       <section class="hero" data-test="hero">
           <h1 class="visually-hidden">Lifetour</h1>
           <div class="hero__container">
@@ -119,7 +118,7 @@
           </div>
       </section>
 
-      <section class="tours" data-test="tours">
+      <section class="tours" data-test="tours" id="tours">
         <div class="tours__wrapper">
           <h2 class="tours__title title" data-title="Ближайшие туры">Ближайшие туры</h2>
           <div class="tours__container">
@@ -278,7 +277,7 @@
         </div>
       </section>
 
-      <section class="training" data-test="training">
+      <section class="training" data-test="training" id="training">
         <div class="training__wrapper">
           <div class="training__content">
             <h2 class="training__title title" data-title="Обучение">Обучение</h2>
@@ -426,7 +425,7 @@
         </div>
       </section>
 
-      <section class="about" data-test="about">
+      <section class="about" data-test="about" id="about">
         <div class="about__wrapper">
           <div class="about__image-wrapper">
             <picture>
@@ -454,7 +453,7 @@
         </div>
       </section>
 
-      <section class="reviews" data-test="reviews">
+      <section class="reviews" data-test="reviews" id="reviews">
         <div class="reviews__wrapper">
           <h2 class="reviews__title title" data-title="Отзовы">Отзывы</h2>
           <div class="reviews__container">
@@ -598,7 +597,7 @@
         </div>
       </section>
 
-      <section class="gallery" data-test="gallery">
+      <section class="gallery" data-test="gallery" id="gallery">
         <div class="gallery__wrapper">
           <h2 class="gallery__title title" data-title="Фотогалерея">Фотогалерея</h2>
           <p>Добавляйте фото с хэштегом #лайфтур, a также отмечайте нас на фото. Лучшие фотографии украсят этот раздел нашего сайта.</p>
@@ -729,7 +728,7 @@
       </section>
     </main>
 
-    <footer class="footer" data-test="footer">
+    <footer class="footer" data-test="footer" id="contacts">
       <section class="footer__contacts contacts">
         <div class="contacts__wrapper">
           <div class="contacts__content">
