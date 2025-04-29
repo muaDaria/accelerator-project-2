@@ -161,14 +161,14 @@
 
 .hero__pagination {
   text-align: center;
-  position: relative;
+  position: absolute;
   left: 0;
   right: 0;
   z-index: 10;
-  bottom: 57px;
+  bottom: 37px;
 
   @media (min-width: $desktop-width) {
-    left: 1100px;
+    left: 1038px;
     bottom: 88px;
   }
 }
