@@ -45,26 +45,17 @@
     content: "";
     width: 14px;
     height: 9px;
-    background-image: url("/__spritemap#sprite-arrow-long-view");
-    background-size: 14px 9px;
-    background-repeat: no-repeat;
-    background-position: center;
+    mask-image: url("/__spritemap#sprite-arrow-long-view");
+    mask-size: 14px 9px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $color-base-white;
     top: 13px;
     left: 12px
-  }
-
-  @media (min-width: $tablet-width) {
-
-  }
-
-  @media (min-width: $desktop-width) {
-
   }
 }
 
 .trainers__button-prev {
-  background-color: $color-disabled;
-
   &::after {
     transform: rotate(180deg);
   }
@@ -115,6 +106,30 @@
   justify-content: center;
 }
 
+.trainers__social-link:hover {
+  border: 1px solid $color-base-black;
+  outline: none;
+}
+
+.trainers__social-link:focus {
+  background-color: transparent;
+  border: none;
+}
+
+.trainers__social-link:focus {
+  background-color: $color-secondary;
+  border: 1px solid $color-secondary;
+}
+
+.trainers__social-link:focus svg {
+  fill: $color-base-white;
+}
+
+.trainers__social-link[disabled] {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 .trainers__content p {
   margin: 0;
   font-size: 12px;
@@ -135,3 +150,23 @@
   display: block;
 }
 
+.trainers__button:hover {
+  background-color: $color-base-white;
+  outline-offset: -1px;
+
+  &::after {
+    background-color: $color-active;
+  }
+}
+
+.trainers__button:focus {
+  background-color: $color-base-white;
+
+  &::after {
+    background-color: $color-active;
+  }
+}
+
+.trainers__button:active {
+  background-color: $color-active;
+}

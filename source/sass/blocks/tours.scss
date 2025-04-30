@@ -297,8 +297,6 @@
 }
 
 .tours__button-prev {
-  background-color: $color-disabled;
-
   &::after {
     transform: rotate(180deg);
   }
@@ -372,7 +370,7 @@
 }
 
 .tours__button:hover {
-  background-color: transparent;
+  background-color: $color-base-white;
   outline-offset: -1px;
 
   &::after {
@@ -381,7 +379,7 @@
 }
 
 .tours__button:focus {
-  background-color: transparent;
+  background-color: $color-base-white;
 
   &::after {
     background-color: $color-active;
