@@ -8,7 +8,6 @@ const initSliderAdvantages = () => {
     return;
   }
 
-
   let advantagesSwiper = null;
 
   const duplicateSlides = () => {
@@ -60,7 +59,6 @@ const initSliderAdvantages = () => {
           prevEl: '.advantages__button-prev',
         },
 
-
       });
     } else if (window.innerWidth < 1440 && advantagesSwiper) {
       advantagesSwiper.destroy(true, true);
@@ -70,9 +68,7 @@ const initSliderAdvantages = () => {
   };
 
   initSwiper();
-
   window.addEventListener('resize', initSwiper);
 };
-
 
 initSliderAdvantages();
