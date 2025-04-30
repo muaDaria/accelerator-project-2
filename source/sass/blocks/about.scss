@@ -12,31 +12,56 @@
 
   @media (min-width: $desktop-width) {
     padding: 100px 120px 100px 0;
-    grid-template-columns: minmax(660px, 850px) 660px;
+    grid-template-columns: repeat(2, 660px);
   }
 }
 
 .about__image-wrapper {
+  width: 320px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    width: calc(10vw - 46px);
+    height: 100%;
+    z-index: 10;
+  }
+
+  &::after {
+    left: -1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &::before {
+    right: -1px;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+  }
 
   @media (min-width: $tablet-width) {
     grid-column: 1/2;
     position: relative;
     padding-top: 134px;
+    width: 450px;
+    height: auto;
 
     &::after {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: -1px;
       width: calc(5vw - 36px);
-      height: 100%;
-      background: linear-gradient(90deg, #ffffff 0%, #ffffff00 100%);
-      z-index: 10;
+      background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &::before {
+      display: none;
     }
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 0;
+    width: 660px;
 
     &::after {
       width: calc(5vw - 72px);
