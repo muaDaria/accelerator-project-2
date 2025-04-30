@@ -1,6 +1,5 @@
 import Swiper from 'swiper';
 import {Navigation} from 'swiper/modules';
-//import 'swiper/css';
 
 const initSliderTours = () => {
   const sliderElement = document.querySelector('.tours__swiper');
@@ -12,53 +11,38 @@ const initSliderTours = () => {
     modules: [Navigation],
 
     direction: 'horizontal',
-    loop: true,
-    grabCursor: 'pointer',
+    loop: false,
+    grabCursor: true,
     slidesPerView: 1,
     initialSlide: 0,
     simulateTouch: true,
-    effect: 'fade',
-
-    fadeEffect: {
-      crossFade: true,
-    },
-
-    //watchOverflow: true,
-    //centeredSides: false,
+    allowTouchMove: true,
+    watchOverflow: true,
 
     navigation: {
       nextEl: '.tours__button-next',
       prevEl: '.tours__button-prev',
     },
 
-    //mousewheel: {
-    // forceToAxis: true,
-    // releaseOnEdges: true,
-    //},
-
     breakpoints: {
       320: {
         slidesPerView: 1,
-        initialSlide: 0,
+        allowTouchMove: true,
         simulateTouch: true,
       },
       768: {
         slidesPerView: 2,
         spaceBetween: 18,
-        simulateTouch: false,
+        allowTouchMove: true,
+        simulateTouch: true,
       },
       1440: {
         slidesPerView: 3,
         spaceBetween: 30,
         simulateTouch: false,
-      }
-    }
-
-    /*breakpoints: {
-      1440: {
         allowTouchMove: false,
       }
-    }*/
+    }
   });
 };
 

@@ -13,7 +13,7 @@ const initSliderTrainers = () => {
 
     direction: 'horizontal',
     loop: true,
-    grabCursor: 'pointer',
+    grabCursor: true,
     slidesPerView: 1,
     //autoHeight: true,
     //initialSlide: 0,

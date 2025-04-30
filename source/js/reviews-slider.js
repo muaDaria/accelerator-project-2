@@ -13,7 +13,7 @@ const initSliderReviews = () => {
 
     direction: 'horizontal',
     loop: false,
-    grabCursor: 'pointer',
+    grabCursor: true,
     slidesPerView: 1,
     initialSlide: 0,
     simulateTouch: true,

@@ -168,7 +168,8 @@
   bottom: 37px;
 
   @media (min-width: $desktop-width) {
-    left: 1038px;
+    left: auto;
+    right: 110px;
     bottom: 88px;
   }
 }
@@ -183,7 +184,8 @@
 
   @media (min-width: $desktop-width) {
     margin: 0;
-    width: 464px;
+    width: max-content;
+    max-width: 450px;
   }
 }
 

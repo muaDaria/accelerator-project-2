@@ -12,16 +12,17 @@ const initSliderHero = () => {
 
     direction: 'horizontal',
     loop: true,
-    grabCursor: 'pointer',
+    grabCursor: true,
     slidesPerView: 1,
     initialSlide: 0,
     simulateTouch: true,
+    allowTouchMove: true,
 
     pagination: {
       el: '.hero__pagination',
       clickable: true,
       renderBullet: function (index, className) {
-        return `<button class="${className} hero__pagination-bullet" tabindex="0" type="button"></button>`;
+        return `<button class="${className} hero__pagination-bullet" type="button"></button>`;
       },
       bulletClass: 'hero__pagination-bullet',
       bulletActiveClass: 'hero__pagination-bullet--active',
