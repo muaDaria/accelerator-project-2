@@ -54,12 +54,6 @@
   }
 }
 
-/*.reviews__slider .swiper-slide {
-  @media (min-width: $tablet-width) {
-    width: 565px;
-  }
-}*/
-
 .reviews__slider .swiper-slide {
   box-shadow: 0px 0px 20px 0px rgba(28, 51, 116, 0.1);
   padding: 20px;
@@ -167,22 +161,43 @@
     content: "";
     width: 14px;
     height: 9px;
-    background-image: url("/__spritemap#sprite-arrow-long-view");
-    background-size: 14px 9px;
-    background-repeat: no-repeat;
-    background-position: center;
+    mask-image: url("/__spritemap#sprite-arrow-long-view");
+    mask-size: 14px 9px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $color-base-white;
     top: 13px;
     left: 12px
   }
 }
 
 .reviews__button-prev {
-  background-color: $color-disabled;
-
   &::after {
     transform: rotate(180deg);
   }
 }
+
+.reviews__button:hover {
+  background-color: $color-base-white;
+  outline-offset: -1px;
+
+  &::after {
+    background-color: $color-active;
+  }
+}
+
+.reviews__button:focus {
+  background-color: $color-base-white;
+
+  &::after {
+    background-color: $color-active;
+  }
+}
+
+.reviews__button:active {
+  background-color: $color-active;
+}
+
 
 /*
 .reviews__swiper {
@@ -256,92 +271,3 @@
 .reviews__image-wrapper img {
   display: block;
 }
-
-/*.reviews__slide h3 {
-  margin-top: 0;
-  margin-bottom: 17px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 20px;
-
-  @media (min-width: $tablet-width) {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    margin-bottom: 0;
-    font-size: 22px;
-    line-height: 22px;
-  }
-}
-
-.reviews__slide p {
-  margin: 0;
-
-  @media (min-width: $tablet-width) {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    font-size: 16px;
-    line-height: 24px;
-  }
-}
-
-.reviews__slide p:not(:last-child) {
-  margin-bottom: 8px;
-}*/
-
-
-/*
-
-.reviews__slide:hover {
-  opacity: 0.8;
-}
-
-.reviews__slide:focus-visible {
-  outline: 2px solid $color-active;
-}
-
-
-
-
-.reviews__button:hover {
-  color: $color-base-black;
-
-  &::after {
-    outline: 1px solid $color-base-black;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    padding: 9px 17px;
-  }
-}
-
-.reviews__button:focus {
-  color: $color-base-black;
-  outline: none;
-
-  &::after {
-    outline: 1px solid $color-base-black;
-    background-color: #e8e8e8;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    padding: 9px 17px;
-  }
-}
-
-.reviews__button:active {
-  color: $color-base-white;
-
-  &::after {
-    background-color: $color-base-black;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    padding: 9px 17px;
-  }
-}
-
-.reviews__button:disabled {
-  color: $color-base-black;
-  opacity: 0.3;
-}
-*/
