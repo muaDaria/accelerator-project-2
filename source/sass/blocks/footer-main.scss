@@ -64,14 +64,15 @@
 .footer-main__logo img {
   width: 142px;
   height: 42px;
+}
 
-  @media (min-width: $tablet-width) {
+.footer-main__logo:hover,
+.footer-main__logo:focus {
+  opacity: 0.8;
+}
 
-  }
-
-  @media (min-width: $desktop-width) {
-
-  }
+.footer-main__logo:active {
+  opacity: 0.5;
 }
 
 .footer-main__list {
@@ -137,32 +138,43 @@
   color: $color-base-black;
   text-decoration: none;
   width: 120px;
+  padding: 5px 0;
+  position: relative;
+
+  &::after {
+    display: none;
+    position: absolute;
+    content: "";
+    right: -5px;
+    bottom: 0;
+    left: -5px;
+    height: 1px;
+    background-color: $color-base-black;
+  }
 
   @media (min-width: $tablet-width) {
     width: max-content;
   }
 }
 
-.footer__link:hover {
-  border-bottom: 1px solid $color-base-white;
-  padding-bottom: 5px;
+.footer-main__link:hover {
+  &::after {
+    display: block;
+  }
 }
 
-/*.footer__link:focus {
-  outline: 1px solid $color-base-white;
-  outline-offset: 10px;
-}*/
-
-.footer__link:active {
-  outline: none;
+.footer-main__link:focus {
+  outline: 1px solid $color-base-black;
+  outline-offset: 5px;
 }
 
-// добавить класс с модификатором --disabled
-// для отключения ссылки
-.footer__link--disabled {
+.footer-main__link:active {
+  color: $color-active;
+}
+
+.footer-main__link[disabled] {
+  color: $color-disabled;
   pointer-events: none;
-  cursor: default;
-  opacity: 0.4;
 }
 
 .footer-main__social {
@@ -199,3 +211,27 @@
     align-self: center;
   }
 }
+
+.footer-main__contacts-phone:hover,
+.footer-main__privacy-policy:hover {
+  color: $color-secondary;
+  opacity: 0.1;
+}
+
+.footer-main__contacts-phone:focus,
+.footer-main__privacy-policy:focus {
+  outline: none;
+  color: $color-secondary;
+}
+
+.footer-main__contacts-phone:active,
+.footer-main__privacy-policy:active {
+  color: $color-active;
+}
+
+.footer-main__contacts-phone[disabled],
+.footer-main__privacy-policy[disabled] {
+  color: $color-disabled;
+  pointer-events: none;
+}
+

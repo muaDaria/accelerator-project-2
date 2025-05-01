@@ -31,32 +31,27 @@
 }
 
 .social__link:hover {
-  background-color: #74819c;
+  border: 1px solid $color-base-black;
+  outline: none;
 }
 
-.social__link:hover svg,
-.social__link:focus svg,
-.social__link:active svg {
-  fill: #ffffff;
-}
-
-.social__link:focus {
-  background-color: #103aae;
+.social__link:focus,
+.social__link:focus-visible {
+  background-color: transparent;
+  border: none;
   outline: none;
 }
 
 .social__link:active {
-  background-color: $color-base-black;
+  background-color: $color-secondary;
+  border: 1px solid $color-secondary;
 }
 
-// добавить класс с модификатором --disabled
-// для отключения ссылки
-.social__link--disabled {
-  pointer-events: none;
-  cursor: default;
+.social__link:active svg {
+  fill: $color-base-white;
+}
+
+.social__link[disabled] {
   opacity: 0.3;
-}
-
-.social__link--disabled svg {
-  fill: #030a1a;
+  pointer-events: none;
 }

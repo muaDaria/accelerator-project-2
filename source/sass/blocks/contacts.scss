@@ -14,6 +14,7 @@
 .contacts__wrapper {
   @include wrapper-size;
   padding: 20px 15px 30px;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     width: $tablet-width;
@@ -224,7 +225,6 @@
   @media (min-width: $tablet-width) {
     line-height: 22px;
     max-width: 256px;
-    //padding-left: 1px;
   }
 
   @media (min-width: $desktop-width) {
@@ -241,13 +241,11 @@
 }
 
 .contacts__image-wrapper {
-  width: 320px;
   height: 343px;
+  width: 100%;
   margin: 0 auto;
-  position: relative;
 
   @media (min-width: $tablet-width) {
-    width: 768px;
     height: 340px;
   }
 
@@ -265,21 +263,22 @@
   content: "";
   width: 29px;
   height: 29px;
-  top: 172px;
+  bottom: -201px;
   left: 202px;
+  z-index: 3;
 
   @media (min-width: $tablet-width) {
     width: 42px;
     height: 42px;
-    top: 183px;
+    bottom: -224px;
     left: 386px;
   }
 
   @media (min-width: $desktop-width) {
     width: 48px;
     height: 48px;
-    top: 164px;
-    left: 362px;
+    bottom: 257px;
+    left: 1082px;
   }
 }
 
@@ -287,7 +286,7 @@
   display: block;
 }
 
-.contacts__image-wrapper svg {
+.contacts__maps-wrapper svg {
   @media (min-width: $tablet-width) {
     width: 41px;
     height: 41px;
@@ -300,15 +299,21 @@
 }
 
 .contacts__link:hover {
-  opacity: 0.5;
+  color: $color-secondary;
+  opacity: 0.1;
 }
 
-.contacts__link:focus-visible {
-  outline: 1px solid $color-base-black;
-  outline-offset: 5px;
+.contacts__link:focus {
+  outline: none;
+  color: $color-secondary;
 }
 
 .contacts__link:active {
-  text-decoration: underline;
-  opacity: 1;
+  color: $color-active;
 }
+
+.contacts__link[disabled] {
+  color: $color-disabled;
+  pointer-events: none;
+}
+

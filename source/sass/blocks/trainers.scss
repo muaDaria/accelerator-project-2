@@ -111,17 +111,18 @@
   outline: none;
 }
 
-.trainers__social-link:focus {
+.trainers__social-link:focus,
+.trainers__social-link:focus-visible {
   background-color: transparent;
   border: none;
 }
 
-.trainers__social-link:focus {
+.trainers__social-link:active {
   background-color: $color-secondary;
   border: 1px solid $color-secondary;
 }
 
-.trainers__social-link:focus svg {
+.trainers__social-link:active svg {
   fill: $color-base-white;
 }
 
