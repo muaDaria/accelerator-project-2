@@ -6,7 +6,8 @@
 
 .header__wrapper {
   @include wrapper-size;
-  padding: 15px 15px 13px 15px;
+
+  padding: 15px 15px 13px;
   display: grid;
   grid-template-columns: 26px 142px;
   grid-template-rows: 42px auto;
@@ -147,6 +148,7 @@
 
 .header__nav-list {
   @include list-reset;
+
   padding-top: 10px;
   padding-bottom: 50px;
 

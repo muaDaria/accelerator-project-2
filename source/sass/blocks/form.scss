@@ -101,10 +101,6 @@
     line-height: 24px;
     max-width: 100%;
   }
-
-  @media (min-width: $desktop-width) {
-
-  }
 }
 
 .form__container p:not(:last-child) {
@@ -134,23 +130,24 @@
 .form__label {
   font-size: 16px;
   line-height: 100%;
-  opacity: 0.5;
+  opacity: 1;
   position: absolute;
   left: 15px;
   top: 18px;
+  transition: all 0.3s ease;
 
   @media (min-width: $tablet-width) {
     left: 30px;
     top: 20px;
   }
-
-  @media (min-width: $desktop-width) {
-
-  }
 }
 
 .form__field {
   padding: 17px 15px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
   width: 100%;
   outline: 1px solid rgba(2, 102, 193, 0.1);
   border: none;
@@ -167,6 +164,7 @@
 }
 
 .form__field::placeholder {
+  font-family: "Montserrat", "Arial", sans-serif;
   color: transparent;
   font-weight: 400;
   font-size: 16px;
@@ -181,19 +179,19 @@
   outline: 1px solid $color-base-black;
 }
 
-.form__field:active .form__label {
-  display: none;
+.form__field-error,
+.form__field-error:hover,
+.form__field-error:focus {
+  outline: 1px solid #ff121f;
+}
+
+.form__field:focus::placeholder {
+  color: $color-disabled;
 }
 
 .form__field:disabled {
   outline: 1px solid $color-disabled;
 }
-
-/*.form__error {
-  color: $color-error;
-  font-weight: 400;
-}
-*/
 
 .form__button {
   color: $color-base-white;
@@ -209,28 +207,4 @@
   @media (min-width: $desktop-width) {
     width: 180px;
   }
-}
-
-.form__button:hover {
-  color: $color-active;
-  background-color: $color-base-white;
-}
-
-.form__button:focus {
-  color: $color-active;
-  background-color: $color-base-white;
-  border: 2px solid $color-base-white;
-  outline: none;
-  opacity: 0.8;
-}
-
-.form__button:active {
-  color: $color-base-black;
-  background-color: $color-base-white;
-  border: 2px solid $color-base-white;
-  opacity: 1;
-}
-
-.form__button:disabled {
-  opacity: 0.5;
 }
