@@ -1,5 +1,6 @@
 .advantages__wrapper {
   @include wrapper-size;
+
   padding: 20px 15px;
 
   @media (min-width: $tablet-width) {
@@ -58,9 +59,9 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-     flex-wrap: wrap;
-     gap: 30px;
-     justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
   }
 
   @media (min-width: $desktop-width) {
@@ -112,7 +113,7 @@
     &::after {
       top: 41px;
     }
- }
+  }
 
   @media (min-width: $desktop-width) {
     width: 380px;
@@ -227,7 +228,7 @@
   font-size: 12px;
   line-height: 18px;
 
-    @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     font-size: 14px;
     line-height: 22px;
   }
@@ -244,7 +245,7 @@
 .advantages__buttons {
   display: none;
 
-  @media (min-width: $desktop-width)  {
+  @media (min-width: $desktop-width) {
     display: block;
     position: absolute;
     width: 78px;

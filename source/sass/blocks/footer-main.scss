@@ -4,6 +4,7 @@
 
 .footer-main__wrapper {
   @include wrapper-size;
+
   padding: 22px 15px 20px;
   display: flex;
   flex-direction: column;
@@ -77,6 +78,7 @@
 
 .footer-main__list {
   @include list-reset;
+
   display: grid;
   grid-template-columns: repeat(2, 120px);
   grid-template-rows: repeat(3, 14px);

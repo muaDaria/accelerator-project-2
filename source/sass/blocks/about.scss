@@ -74,13 +74,14 @@
   display: block;
   object-position: left center;
 
-   @media (min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     object-position: inherit;
   }
 }
 
 .about__content {
   @include wrapper-size;
+
   padding: 0 15px;
 
   @media (min-width: $tablet-width) {
@@ -141,6 +142,7 @@
 
 .about__content ul {
   @include list-reset;
+
   display: flex;
   flex-direction: column;
   gap: 25px;

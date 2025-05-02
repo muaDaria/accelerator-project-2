@@ -6,13 +6,21 @@
   }
 
   @media (min-width: $desktop-width) {
-    position: relative;
     padding-bottom: 0;
+  }
+}
+
+.contacts__container {
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    margin: 0 auto;
+    position: relative;
   }
 }
 
 .contacts__wrapper {
   @include wrapper-size;
+
   padding: 20px 15px 30px;
   position: relative;
 
@@ -134,14 +142,12 @@
   }
 
   @media (min-width: $tablet-width) {
-
     &::before {
       background-size: 24px 24px;
     }
   }
 
   @media (min-width: $desktop-width) {
-
     &::before {
       background-size: 26px 26px;
     }
@@ -157,7 +163,6 @@
   }
 
   @media (min-width: $tablet-width) {
-
     &::before {
       top: 2px;
       background-size: 23px 17px;
@@ -165,7 +170,6 @@
   }
 
   @media (min-width: $desktop-width) {
-
     &::before {
       top: 16px;
       background-size: 25px 19px;
@@ -188,7 +192,6 @@
 
 
   @media (min-width: $desktop-width) {
-
     &::before {
       background-size: 26px 26px;
     }

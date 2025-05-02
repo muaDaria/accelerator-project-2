@@ -13,7 +13,7 @@
 }
 
 .button:hover {
-  outline:  1px solid $color-active;
+  outline: 1px solid $color-active;
   border: none;
   color: $color-active;
   background-color: $color-base-white;
@@ -35,7 +35,7 @@
   color: $color-base-white;
 }
 
-.header__contacts-phone[disabled]  {
+.header__contacts-phone[disabled] {
   color: $color-disabled;
   pointer-events: none;
 }

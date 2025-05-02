@@ -9,6 +9,7 @@
 
 .hero__wrapper {
   @include wrapper-size;
+
   padding: 144px 15px 80px;
   grid-column: 1;
   grid-row: 1;
@@ -72,6 +73,7 @@
 
   @media (min-width: $desktop-width) {
     @include list-reset;
+
     max-width: 900px;
     font-weight: 400;
     font-size: 12px;
@@ -118,7 +120,7 @@
   grid-row: 1;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;

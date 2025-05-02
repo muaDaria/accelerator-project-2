@@ -28,7 +28,7 @@
     background-size: 2140px 1630px;
   }
 
-  @media (min-width: 4300px) {
+  @media (width >= 4300px) {
     background-position: right 0 top -126px;
   }
 }
