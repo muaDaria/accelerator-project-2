@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         label.style.opacity = '0';
       } else {
         label.style.top = '18px';
-        label.style.opacity = '1';
+        label.style.opacity = '0.5';
       }
     };
 

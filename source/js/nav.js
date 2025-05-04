@@ -1,4 +1,4 @@
-const elementNav = document.querySelector('.header__wrapper');
+const elementNav = document.querySelector('.header');
 const elementToggle = document.querySelector('.header__toggle');
 const navItems = document.querySelectorAll('.header__nav-item');
 const overlay = document.querySelector('.overlay');

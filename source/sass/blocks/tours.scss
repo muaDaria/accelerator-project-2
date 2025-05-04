@@ -54,8 +54,6 @@
 }
 
 .tours__duration-list {
-  @include list-reset;
-
   display: flex;
   flex-wrap: wrap;
   gap: 5px;

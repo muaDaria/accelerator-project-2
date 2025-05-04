@@ -1,6 +1,6 @@
 .hero__content.swiper-slide {
   position: relative;
-  background-color: rgba(41, 29, 2, 0.514);
+  background-color: rgba(41, 29, 2, 0.5);
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
@@ -170,8 +170,7 @@
   bottom: 37px;
 
   @media (min-width: $desktop-width) {
-    left: auto;
-    right: 110px;
+    left: calc(50% + 490px);
     bottom: 88px;
   }
 }

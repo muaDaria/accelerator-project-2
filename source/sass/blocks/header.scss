@@ -120,7 +120,6 @@
   left: 0;
   top: 100px;
   width: 100%;
-  padding-left: 15px;
   z-index: 50;
   background-color: $color-secondary;
 
@@ -141,7 +140,6 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-left: 45px;
     top: 80px;
   }
 
@@ -157,14 +155,15 @@
 
 .header__nav-list {
   @include list-reset;
-  width: 320px;
+
+  width: 290px;
   margin: 0 auto;
   padding-top: 10px;
   padding-bottom: 50px;
 
   @media (min-width: $tablet-width) {
     padding-top: 28px;
-    width: $tablet-width;
+    width: 678px;
   }
 
   @media (min-width: $desktop-width) {

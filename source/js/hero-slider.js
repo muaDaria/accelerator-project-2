@@ -22,7 +22,7 @@ const initSliderHero = () => {
       el: '.hero__pagination',
       clickable: true,
       renderBullet: function (index, className) {
-        return `<button class="${className} hero__pagination-bullet" type="button"></button>`;
+        return `<button class="${className} hero__pagination-bullet" type="button" aria-label="Выберите слайд"></button>`;
       },
       bulletClass: 'hero__pagination-bullet',
       bulletActiveClass: 'hero__pagination-bullet--active',
