@@ -1,6 +1,6 @@
 .reviews {
   @media (min-width: $tablet-width) {
-    //overflow: hidden;
+   // overflow: hidden;
   }
 }
 
@@ -51,7 +51,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: $desktop-width;
+    width: 1320px;
     margin: 0;
   }
 }
