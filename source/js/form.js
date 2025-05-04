@@ -55,9 +55,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (isValid) {
       form.submit();
+      form.reset();
     } else {
       fieldEmail.reportValidity();
       fieldPhone.reportValidity();
+
+      setTimeout(() => {
+        if (!fieldEmail.validity.valid) {
+          fieldEmail.blur();
+          setTimeout(() => {
+            fieldEmail.focus();
+          }, 0);
+        } else if (!fieldPhone.validity.valid) {
+          fieldPhone.blur();
+          setTimeout(() => {
+            fieldPhone.focus();
+          }, 0);
+        }
+      }, 1500);
     }
   });
 });
