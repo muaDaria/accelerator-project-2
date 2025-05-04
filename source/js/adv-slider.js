@@ -51,8 +51,8 @@ const initSliderAdvantages = () => {
         centeredSlides: true,
         slideToClickedSlide: true,
         watchOverflow: true,
-        simulateTouch: false,
-        allowTouchMove: false,
+        simulateTouch: true,
+        allowTouchMove: true,
 
         navigation: {
           nextEl: '.advantages__button-next',

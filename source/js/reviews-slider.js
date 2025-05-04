@@ -29,21 +29,15 @@ const initSliderReviews = () => {
       320: {
         slidesPerView: 1,
         spaceBetween: 40,
-        simulateTouch: true,
-        allowTouchMove: true,
       },
       768: {
         slidesPerView: 'auto',
         spaceBetween: 30,
-        simulateTouch: true,
-        allowTouchMove: true,
         slidesOffsetAfter: 0,
       },
       1440: {
         slidesPerView: 'auto',
         spaceBetween: 120,
-        simulateTouch: false,
-        allowTouchMove: false,
         slidesOffsetAfter: 0,
       }
     }

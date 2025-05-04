@@ -26,21 +26,15 @@ const initSliderTrainers = () => {
       320: {
         slidesPerView: 1,
         initialSlide: 2,
-        simulateTouch: true,
-        allowTouchMove: true,
       },
       768: {
         slidesPerView: 3,
         initialSlide: 0,
         spaceBetween: 20,
-        simulateTouch: true,
-        allowTouchMove: true,
       },
       1440: {
         slidesPerView: 4,
         spaceBetween: 20,
-        simulateTouch: false,
-        allowTouchMove: false,
       }
     }
   });

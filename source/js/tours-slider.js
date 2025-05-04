@@ -27,20 +27,14 @@ const initSliderTours = () => {
     breakpoints: {
       320: {
         slidesPerView: 1,
-        allowTouchMove: true,
-        simulateTouch: true,
       },
       768: {
         slidesPerView: 2,
         spaceBetween: 18,
-        allowTouchMove: true,
-        simulateTouch: true,
       },
       1440: {
         slidesPerView: 3,
         spaceBetween: 30,
-        simulateTouch: false,
-        allowTouchMove: false,
       }
     }
   });

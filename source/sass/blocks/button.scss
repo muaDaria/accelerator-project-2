@@ -34,8 +34,3 @@
   background-color: $color-disabled;
   color: $color-base-white;
 }
-
-.header__contacts-phone[disabled] {
-  color: $color-disabled;
-  pointer-events: none;
-}
