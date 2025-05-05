@@ -36,7 +36,19 @@ const initSliderTrainers = () => {
         slidesPerView: 4,
         spaceBetween: 20,
       }
-    }
+    },
+
+    on: {
+      slideChange: function () {
+        this.slides.forEach((slide, index) => {
+          const isActive = index === this.activeIndex;
+          slide.querySelectorAll('a, button, input, textarea, select, [tabindex]')
+            .forEach((el) => {
+              el.tabIndex = isActive ? 0 : -1;
+            });
+        });
+      },
+    },
   });
 };
 

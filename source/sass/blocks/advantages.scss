@@ -1,3 +1,22 @@
+.advantages {
+  @media (min-width: $tablet-width) {
+    background-image:
+      image-set(
+        url("../../img/clouds/clouds-tablet3@1x.webp") 1x type("image/webp"),
+        url("../../img/clouds/clouds-tablet3@2x.webp") 2x type("image/webp"),
+        url("../../img/clouds/clouds-tablet3@1x.png") 1x type("image/png"),
+        url("../../img/clouds/clouds-tablet3@2x.png") 2x type("image/png"),
+      );
+    background-repeat: no-repeat;
+    background-position: center bottom 103px;
+    background-size: 2091px 996px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: none;
+  }
+}
+
 .advantages__wrapper {
   @include wrapper-size;
 
@@ -54,6 +73,7 @@
 
 .advantages__slider {
   @include list-reset;
+
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -77,6 +97,7 @@
 
 .advantages__slide {
   border: 1px solid rgba(2, 102, 193, 0.1);
+  background-color: $color-base-white;
   padding: 19px 9px;
   position: relative;
 
@@ -168,7 +189,6 @@
     background-size: 24px 24px;
   }
 }
-
 
 .advantages__slide--eco {
   &::after {

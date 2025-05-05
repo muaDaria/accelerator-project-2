@@ -1,4 +1,3 @@
-
 .wrapper-tours-training {
   background-image:
     image-set(
@@ -26,9 +25,5 @@
   @media (min-width: $desktop-width) {
     background-position: left calc(50vw + 90px) top -126px;
     background-size: 2140px 1630px;
-  }
-
-  @media (width >= 4300px) {
-    background-position: right 0 top -126px;
   }
 }

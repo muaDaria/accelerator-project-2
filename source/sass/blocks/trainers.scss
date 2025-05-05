@@ -145,6 +145,11 @@
 
   @media (min-width: $tablet-width) {
     width: 100%;
+    max-width: 183px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 255px;
   }
 }
 

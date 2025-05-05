@@ -40,7 +40,7 @@ const initSliderReviews = () => {
         spaceBetween: 120,
         slidesOffsetAfter: 0,
       }
-    }
+    },
   });
 };
 
