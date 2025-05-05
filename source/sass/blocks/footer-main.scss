@@ -81,7 +81,7 @@
 
   display: grid;
   grid-template-columns: repeat(2, 120px);
-  grid-template-rows: repeat(3, 14px);
+  grid-template-rows: repeat(3, min-width);
   gap: 50px;
   row-gap: 15px;
   text-align: center;
@@ -90,7 +90,7 @@
     display: flex;
     flex-wrap: wrap;
     align-self: center;
-    justify-content: space-between;
+    //justify-content: space-between;
     width: 100%;
     gap: 24px;
   }
@@ -156,6 +156,7 @@
 
   @media (min-width: $tablet-width) {
     width: max-content;
+    max-width: 494px;
   }
 }
 
@@ -191,6 +192,7 @@
   font-size: 12px;
   line-height: 100%;
   color: $color-base-black;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     align-self: center;

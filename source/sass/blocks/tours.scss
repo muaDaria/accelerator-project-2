@@ -39,6 +39,7 @@
   grid-template-columns: 1fr;
   width: 100%;
   line-height: unset;
+  height: auto;
 }
 
 .tours__details {
@@ -193,7 +194,7 @@
 }
 
 .tours__info-item--rating {
-  min-width: 84px;
+  width: 84px;
   position: relative;
 }
 
@@ -233,6 +234,14 @@
     background-repeat: repeat-x;
     left: 51px;
   }
+}
+
+.tours__info-item--date {
+  max-width: 83px;
+}
+
+.tours__info-item--group {
+  max-width: 69px;
 }
 
 .tours__image-wrapper {
@@ -325,6 +334,8 @@
     mask-size: 12px 14px;
     background-color: $color-base-black;
     right: 8px;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 
   @media (min-width: $tablet-width) {
