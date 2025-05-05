@@ -94,6 +94,7 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
@@ -250,6 +251,7 @@
   height: 343px;
   width: 100%;
   margin: 0 auto;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     height: 340px;
@@ -267,22 +269,22 @@
   content: "";
   width: 29px;
   height: 29px;
-  bottom: -201px;
-  left: 202px;
+  top: 171px;
+  left: calc(50% + 43px);
   z-index: 3;
 
   @media (min-width: $tablet-width) {
     width: 42px;
     height: 42px;
-    bottom: -224px;
-    left: 386px;
+    top: 183px;
+    left: calc(50% + 2px);
   }
 
   @media (min-width: $desktop-width) {
     width: 48px;
     height: 48px;
-    bottom: 162px;
-    left: 962px;
+    top: 163px;
+    left: 363px;
   }
 }
 

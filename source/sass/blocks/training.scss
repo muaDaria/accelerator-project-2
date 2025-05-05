@@ -211,16 +211,6 @@
   }
 }
 
-.training__process-item--boots {
-  @media (min-width: $tablet-width) {
-    grid-column: 1/2;
-  }
-
-  @media (min-width: $desktop-width) {
-    grid-column: 2/3;
-  }
-}
-
 .training__process-item--mountain {
   @media (min-width: $tablet-width) {
     grid-column: 2/3;
